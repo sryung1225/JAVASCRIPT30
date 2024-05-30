@@ -4,16 +4,16 @@
 
 🏠 [JavaScript30](https://javascript30.com/)
 
-🔗 [repository](https://github.com/wesbos/JavaScript30)
+🔗 [fork repository](https://github.com/wesbos/JavaScript30)
 
 </br>
 
 <table>
 <thead>
-<tr><th>NO</th><th>TITLE</th><th>🔗</th><th>📝</th></tr>
+<tr><th>NO</th><th>TITLE</th><th>VIEW</th><th>CODE</th></tr>
 </thead>
 <tbody>
-<tr><td align="center">1</td><td>JavaScript Drum Kit</td><td align="center"></td><td align="center"></td></tr>
+<tr><td align="center">1</td><td>JavaScript Drum Kit</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/01_JavaScript_Drum_Kit/">🥁</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/01_JavaScript_Drum_Kit/scripts.js">🥁</a></td></tr>
 <tr><td align="center">2</td><td>JS and CSS Clock</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">3</td><td>CSS Variables</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">4</td><td>Array Cardio Day 1</td><td align="center"></td><td align="center"></td></tr>
