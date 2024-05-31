@@ -38,4 +38,8 @@ body {
   width: 50%;
   height: 6px;
   background-color: black;
+  transform-origin: 100%;
+  transform: rotate(90deg); // 12시
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
