@@ -4,6 +4,7 @@ fetch("data.json")
   .then((data) => {
     const inventors = data.inventors;
     const people = data.people;
+    const rides = data.rides;
 
     born1500s(inventors);
   })
@@ -33,19 +34,3 @@ function born1500s(inventors) {
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
-const data = [
-  "car",
-  "car",
-  "truck",
-  "truck",
-  "bike",
-  "walk",
-  "car",
-  "van",
-  "bike",
-  "walk",
-  "car",
-  "van",
-  "car",
-  "truck",
-];

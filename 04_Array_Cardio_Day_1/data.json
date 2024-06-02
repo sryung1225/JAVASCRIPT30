@@ -55,5 +55,21 @@
     "Blair, Tony",
     "Beecher, Henry",
     "Biondo, Frank"
+  ],
+  "rides": [
+    "car",
+    "car",
+    "truck",
+    "truck",
+    "bike",
+    "walk",
+    "car",
+    "van",
+    "bike",
+    "walk",
+    "car",
+    "van",
+    "car",
+    "truck"
   ]
 }
