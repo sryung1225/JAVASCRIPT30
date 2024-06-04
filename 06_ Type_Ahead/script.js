@@ -2,6 +2,7 @@
 // - json 파일을 이용하여 데이터 fetch
 // - 검색어가 포함되는 데이터를 찾는 수단으로 정규표현식 활용
 // - 검색어와 일치하는 부분을 표시하는 수단으로 정규표현식 활용
+// - 숫자 데이터 포맷팅
 // -----------------------------------------------------
 const endpoint =
   "https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json";
@@ -14,6 +15,11 @@ fetch(endpoint)
     // console.log(cities); // ? (1000) [{…}, ...]
   })
   .catch((error) => console.error("못 가져 왔담"));
+
+function numberWithCommas(x) {
+  // 숫자 데이터를 갖고 3의 자리마다 ,가 존재하는 문자열로 변환
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 function findMatches(wordToMatch, cities) {
   // 검색어(wordToMatch)가 city 혹은 state에 존재하는 경우를 필터링
@@ -42,10 +48,11 @@ function displayMatches() {
         regex,
         `<i class="hl">${this.value}</i>`
       );
-      // li로 `cityName, stateName`를 감싸서 출력
+      // li로 `cityName, stateName`와 인구수를 감싸서 출력
       return `
     <li>
       <span class="name">${cityName}, ${stateName}</span>
+      <span class="population">${numberWithCommas(place.population)}</span>
     </li>
   `;
     })
