@@ -55,27 +55,44 @@ body {
   background-image: url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500);
 }
 
-.panel > * {
-  flex: 1;
+.panel p {
+  flex: 1 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   margin: 0;
-  transition: transform 0.5s;
-}
-
-.panel p {
   font-family: "Amatic SC", cursive;
   font-size: 2em;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
   text-transform: uppercase;
+  transition: transform 0.5s;
+}
+
+@media only screen and (max-width: 600px) {
+  .panel p {
+    font-size: 1em;
+  }
+}
+
+.panel p:first-child {
+  transform: translateY(-100%);
 }
 
 .panel p:nth-child(2) {
   font-size: 4em;
 }
 
+.panel p:last-child {
+  transform: translateY(100%);
+}
+
 .panel.open {
+  flex: 5;
   font-size: 40px;
+}
+
+.panel.open-active > p:first-child,
+.panel.open-active > p:last-child {
+  transform: translateY(0);
 }
