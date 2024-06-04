@@ -13,7 +13,7 @@
 <tr><th>NO</th><th>TITLE</th><th>VIEW</th><th>CODE</th></tr>
 </thead>
 <tbody>
-<tr><td align="center">1</td><td>JavaScript Drum Kit</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/01_JavaScript_Drum_Kit/">🥁</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/01_JavaScript_Drum_Kit/scripts.js">🥁</a></td></tr>
+<tr><td align="center">1</td><td>JavaScript Drum Kit</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/01_JavaScript_Drum_Kit/">🥁</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/01_JavaScript_Drum_Kit/script.ts">🥁</a></td></tr>
 <tr><td align="center">2</td><td>JS and CSS Clock</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/02_JS_and_CSS_Clock/">⏰</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/02_JS_and_CSS_Clock/scripts.js">⏰</a></td></tr>
 <tr><td align="center">3</td><td>CSS Variables</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/03_Playing_with_CSS_Variables_and_JS/">🖼️</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/03_Playing_with_CSS_Variables_and_JS/scripts.js">🖼️</a></td></tr>
 <tr><td align="center">4</td><td>Array Cardio Day 1</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/04_Array_Cardio_Day_1/">🍡</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/04_Array_Cardio_Day_1/script.js">🍡</a></td></tr>
