@@ -1,19 +1,16 @@
-// ## Array Cardio Day 2
-
-const people = [
-  { name: 'Wes', year: 1988 },
-  { name: 'Kait', year: 1986 },
-  { name: 'Irv', year: 1970 },
-  { name: 'Lux', year: 2015 },
-];
-
-const comments = [
-  { text: 'Love this!', id: 523423 },
-  { text: 'Super good', id: 823423 },
-  { text: 'You are the best', id: 2039842 },
-  { text: 'Ramen is my fav food ever', id: 123523 },
-  { text: 'Nice Nice Nice!', id: 542328 },
-];
+// 데이터를 json으로 분리하고 따로 데이터 가져오기 수행
+const endpoint = './data.json';
+const people = [];
+const comments = [];
+fetch(endpoint)
+  .then((response) => response.json())
+  .then((data) => {
+    people.push(...data.people);
+    comments.push(...data.comments);
+    // console.log(people); // ? (4) [{…}, {…}, {…}, {…}]
+    // console.log(comments); // ? (5) [{…}, {…}, {…}, {…}, {…}]
+  })
+  .catch((error) => console.error('못 찾았담'));
 
 // Some and Every Checks
 // Array.prototype.some() // is at least one person 19 or older?
