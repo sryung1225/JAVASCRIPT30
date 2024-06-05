@@ -2,22 +2,50 @@
 const endpoint = './data.json';
 const people = [];
 const comments = [];
+
 fetch(endpoint)
   .then((response) => response.json())
   .then((data) => {
     people.push(...data.people);
     comments.push(...data.comments);
-    // console.log(people); // ? (4) [{…}, {…}, {…}, {…}]
-    // console.log(comments); // ? (5) [{…}, {…}, {…}, {…}, {…}]
+
+    // 각 배열 메서드를 활용해서 조건 만족하기
+    hasAdult(people); // Array.prototype.some()
+    isEveryoneAdult(people); // Array.prototype.every()
+    findComment(comments, 823423); // Array.prototype.find()
+    deleteComment(comments, 823423); // Array.prototype.finedIndex()
   })
-  .catch((error) => console.error('못 찾았담'));
+  .catch((error) => console.error(error, '못 찾았담'));
 
-// Some and Every Checks
-// Array.prototype.some() // is at least one person 19 or older?
-// Array.prototype.every() // is everyone 19 or older?
+const currentYear = new Date().getFullYear(); // 현재 년도
 
-// Array.prototype.find()
-// Find is like filter, but instead returns just the one you are looking for
-// find the comment with the ID of 823423
+// 1. people 중 한 명 이상이 19세 이상인지 판별
+function hasAdult(people) {
+  const answer = people.some((person) => {
+    if (currentYear - person.year + 1 >= 19) return true;
+    return false;
+  });
+  console.log(answer);
+}
 
-// Array.prototype.findIndex()
+// 2. people 모두가 19세 이상인지 판별
+function isEveryoneAdult(people) {
+  const answer = people.every((person) => currentYear - person.year + 1 >= 19);
+  console.log(answer);
+}
+
+// 3. ID에 해당되는 comment 찾기
+function findComment(comments, id) {
+  const comment = comments.find((comment) => comment.id === id);
+  console.log(comment.text);
+}
+
+// 4. ID에 해당되는 comment 제거하기
+function deleteComment(comments, id) {
+  const commentIndex = comments.findIndex((comment) => comment.id === id);
+  const newComments = [
+    ...comments.slice(0, commentIndex),
+    ...comments.slice(commentIndex + 1),
+  ];
+  console.log(newComments);
+}
