@@ -1,6 +1,7 @@
 // 그림판 만들기
 // - 반응형 캔버스 크기
 // - 마우스 좌표를 연속적으로 저장하면서 그림 그리기
+// - hsl 색상값을 활용하여 무지개색으로 붓 색 변화시키기 (hue: 0 ~ 360)
 // -----------------------------------------------------
 
 const canvas = document.querySelector('#draw');
@@ -18,14 +19,19 @@ ctx.lineWidth = 10;
 
 let isDrawing = false; // 붓 활성화 유무
 let [lastX, lastY] = [0, 0]; // 붓의 이전 좌표
+let hue = 0;
 
 function draw(e) {
   if (!isDrawing) return;
+  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
   ctx.beginPath(); // 선 그리기를 위한 시작 명령어
   ctx.moveTo(lastX, lastY); // 붓의 이전 좌표를 선의 시작점으로 설정
   ctx.lineTo(e.offsetX, e.offsetY); // 현재 좌표까지 선 그리기
   ctx.stroke(); // 선 화면에 렌더링
   [lastX, lastY] = [e.offsetX, e.offsetY]; // 현재 붓의 좌표 저장
+
+  hue++;
+  if (hue >= 360) hue = 0;
 }
 
 // 마우스를 누르고 있을 때에만 그림을 그리도록 붓을 조절
