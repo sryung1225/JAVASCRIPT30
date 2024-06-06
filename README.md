@@ -20,7 +20,7 @@
 <tr><td align="center">5</td><td>Flex Panel Gallery</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/05_Flex_Panel_Gallery/">🗂️</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/05_Flex_Panel_Gallery/script.ts">🗂️</a></td></tr>
 <tr><td align="center">6</td><td>Type Ahead</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/06_Type_Ahead/">🎫</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/06_Type_Ahead/script.ts">🎫</a></td></tr>
 <tr><td align="center">7</td><td>Array Cardio Day 2</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/07_Array_Cardio_Day_2/">🍡</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/07_Array_Cardio_Day_2/script.ts">🍡</a></td></tr>
-<tr><td align="center">8</td><td>Fun with HTML5 Canvas</td><td align="center"></td><td align="center"></td></tr>
+<tr><td align="center">8</td><td>Fun with HTML5 Canvas</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/08_Fun_with_HTML5_Canvas/">🧑‍🎨</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/08_Fun_with_HTML5_Canvas/script.ts">🧑‍🎨</a></td></tr>
 <tr><td align="center">9</td><td>Dev Tools Domination</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">10</td><td>Hold Shift and Check Checkboxes</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">11</td><td>Custom Video Player</td><td align="center"></td><td align="center"></td></tr>
