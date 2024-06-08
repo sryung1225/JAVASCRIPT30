@@ -22,7 +22,7 @@
 <tr><td align="center">7</td><td>Array Cardio Day 2</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/07_Array_Cardio_Day_2/">🍡</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/07_Array_Cardio_Day_2/script.ts">🍡</a></td></tr>
 <tr><td align="center">8</td><td>Fun with HTML5 Canvas</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/08_Fun_with_HTML5_Canvas/">🧑‍🎨</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/08_Fun_with_HTML5_Canvas/script.ts">🧑‍🎨</a></td></tr>
 <tr><td align="center">9</td><td>Dev Tools Domination</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/09_Dev_Tools_Domination/">🔬</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/09_Dev_Tools_Domination/script.ts">🔬</a></td></tr>
-<tr><td align="center">10</td><td>Hold Shift and Check Checkboxes</td><td align="center"></td><td align="center"></td></tr>
+<tr><td align="center">10</td><td>Hold Shift and Check Checkboxes</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/10_Hold_Shift_and_Check_Checkboxes/">✅</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/10_Hold_Shift_and_Check_Checkboxes/script.ts">✅</a></td></tr>
 <tr><td align="center">11</td><td>Custom Video Player</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">12</td><td>Key Sequence Detection</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">13</td><td>Slide in on Scroll</td><td align="center"></td><td align="center"></td></tr>
