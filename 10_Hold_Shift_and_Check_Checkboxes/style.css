@@ -37,6 +37,11 @@ input[type='checkbox'] + label {
   border-left: 1px solid #d1e2ff;
   transition: background 0.2s;
   cursor: pointer;
+  // 텍스트 드래그 방지
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
 }
 
 input[type='checkbox']:checked + label {
