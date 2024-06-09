@@ -5,6 +5,7 @@
 // - 재생 진행 바 클릭 시 해당 구간으로 점프
 // - 재생 진행 바 드래그 시 해당 구간으로 이동
 // - 앞/뒤 스킵 버튼 누르면 현재 기준으로 구간 이동
+// - 볼륨/재생속도 게이지 조절
 // -----------------------------------------------------
 
 // 요소들 선언
@@ -14,6 +15,7 @@ const toggle = player.querySelector('.toggle');
 const progress = player.querySelector('.progress');
 const progressBar = player.querySelector('.progress__filled');
 const skipButtons = player.querySelectorAll('[data-skip]');
+const ranges = player.querySelectorAll('.player__slider');
 
 // 1. 비디오 재생/정지 토글
 function togglePlay() {
@@ -56,3 +58,13 @@ function skip() {
 }
 
 skipButtons.forEach((button) => button.addEventListener('click', skip));
+
+// 4. 볼륨(volum) & 재생속도(playbackRate) 값 조절
+function handleRangeUpdate() {
+  video[this.name] = this.value;
+}
+
+ranges.forEach((range) => range.addEventListener('change', handleRangeUpdate));
+ranges.forEach((range) =>
+  range.addEventListener('mousemove', handleRangeUpdate),
+);

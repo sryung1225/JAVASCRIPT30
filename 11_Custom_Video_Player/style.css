@@ -98,7 +98,7 @@ body {
   border-color: #ffc600;
 }
 
-/* 볼륨 조절 버튼 */
+/* 볼륨, 재생 속도 조절 버튼 */
 .player__slider {
   width: 10px;
   height: 30px;
