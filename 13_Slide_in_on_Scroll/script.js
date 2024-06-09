@@ -1,5 +1,6 @@
 // 스크롤에 따른 이미지 렌더링
 // - 이벤트가 중복되어 여러번 발생하는 것을 막기 위한 debounce 적용
+// - 스크롤 좌표를 인식하여 이미지가 절반 이상 보여질 때에만 화면에 렌더링
 // -----------------------------------------------------
 
 function debounce(func, wait = 20, immediate = true) {
@@ -33,3 +34,24 @@ function debounce(func, wait = 20, immediate = true) {
   // 연속 호출 시 타이머를 리셋하여 마지막 호출로부터 wait 시간이 지난 후에만 실행
   // 불필요한 함수 호출을 줄여 성능을 최적화함
 }
+
+const sliderImages = document.querySelectorAll('.slide-in');
+
+function checkSlide() {
+  sliderImages.forEach((sliderImage) => {
+    const slideInAt =
+      window.scrollY + window.innerHeight - sliderImage.height / 2; // 이미지가 절반 노출된 경우의 y좌표
+    const imageBottom = sliderImage.offsetTop + sliderImage.height; // 이미지의 바닥 y좌표
+    const isHalfShown = slideInAt > sliderImage.offsetTop; // 현재 이미지가 절반 노출되고 있으면 true
+    const isNotScrolledPast = window.scrollY < imageBottom; // 현재 스크롤 위치가 이미지의 바닥 y좌표보다 위에 있으면 true
+
+    // 이미지가 반 이상 노출되기 시작 ~ 이미지가 화면을 벗어나기 직전
+    if (isHalfShown && isNotScrolledPast) {
+      sliderImage.classList.add('active');
+    } else {
+      sliderImage.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', debounce(checkSlide));
