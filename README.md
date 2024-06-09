@@ -24,7 +24,7 @@
 <tr><td align="center">9</td><td>Dev Tools Domination</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/09_Dev_Tools_Domination/">🔬</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/09_Dev_Tools_Domination/script.ts">🔬</a></td></tr>
 <tr><td align="center">10</td><td>Hold Shift and Check Checkboxes</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/10_Hold_Shift_and_Check_Checkboxes/">✅</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/10_Hold_Shift_and_Check_Checkboxes/script.ts">✅</a></td></tr>
 <tr><td align="center">11</td><td>Custom Video Player</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/11_Custom_Video_Player/">📽</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/11_Custom_Video_Player/script.ts">📽</a></td></tr>
-<tr><td align="center">12</td><td>Key Sequence Detection</td><td align="center"></td><td align="center"></td></tr>
+<tr><td align="center">12</td><td>Key Sequence Detection</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/12_Key_Sequence_Detection/">🦄</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/12_Key_Sequence_Detection/script.ts">🦄</a></td></tr>
 <tr><td align="center">13</td><td>Slide in on Scroll</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">14</td><td>JavaScript References VS Copying</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">15</td><td>LocalStorage</td><td align="center"></td><td align="center"></td></tr>
