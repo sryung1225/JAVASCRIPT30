@@ -29,7 +29,7 @@
 <tr><td align="center">14</td><td>JavaScript References VS Copying</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/14_JavaScript_References_VS_Copying/">🖨</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/14_JavaScript_References_VS_Copying/script.ts">🖨</a></td></tr>
 <tr><td align="center">15</td><td>LocalStorage</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/15_LocalStorage/">🌮</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/15_LocalStorage/script.ts">🌮</a></td></tr>
 <tr><td align="center">16</td><td>Mouse Move Shadow</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/16_Mouse_Move_Shadow/">👥</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/16_Mouse_Move_Shadow/script.ts">👥</a></td></tr>
-<tr><td align="center">17</td><td>Sort Without Articles</td><td align="center"></td><td align="center"></td></tr>
+<tr><td align="center">17</td><td>Sort Without Articles</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/17_Sort_Without_Articles/">😁</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/17_Sort_Without_Articles/script.ts">😁</a></td></tr>
 <tr><td align="center">18</td><td>Adding Up Times with Reduce</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">19</td><td>Webcam Fun</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">20</td><td>Speech Detection</td><td align="center"></td><td align="center"></td></tr>
