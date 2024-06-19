@@ -11,6 +11,9 @@ const ctx = canvas.getContext('2d');
 const snap = document.querySelector('.snap'); // 촬영 시 들릴 효과음
 const strip = document.querySelector('.strip'); // 갤러리
 
+let isRedEffect = false;
+let isRgbSplit = false;
+
 // 사용자의 실시간 영상 가져오기
 function getVideo() {
   navigator.mediaDevices
@@ -44,8 +47,12 @@ function paintToCanvas() {
 
     // 필터 적용하기
     let pixels = ctx.getImageData(0, 0, width, height); // 캔버스 내 픽셀 데이터 가져오기
-    // pixels = redEffects(pixels); // 빨강 필터 적용
-    // pixels = rgbSplit(pixels); // RGB 분리 필터 적용
+    if (isRedEffect) {
+      pixels = redEffect(pixels); // 빨강 필터 적용
+    }
+    if (isRgbSplit) {
+      pixels = rgbSplit(pixels); // RGB 분리 필터 적용
+    }
     pixels = greenScreen(pixels);
     ctx.putImageData(pixels, 0, 0); // 캔버스 내 픽셀 데이터 다시 그리기
   }, 16);
@@ -77,6 +84,11 @@ function redEffect(pixels) {
   return pixels;
 }
 
+// 필터 토글 함수 - 빨간색
+function toggleRedEffect() {
+  isRedEffect = !isRedEffect;
+}
+
 // 필터 - RGB 색상 분리
 function rgbSplit(pixels) {
   for (let i = 0; i < pixels.data.length; i += 4) {
@@ -85,6 +97,11 @@ function rgbSplit(pixels) {
     pixels.data[i - 550] = pixels.data[i + 2]; // blue
   }
   return pixels;
+}
+
+// 필터 토글 함수 - RGB 색상 분리
+function toggleRgbSplit() {
+  isRgbSplit = !isRgbSplit;
 }
 
 // 필터 - 크로마키
