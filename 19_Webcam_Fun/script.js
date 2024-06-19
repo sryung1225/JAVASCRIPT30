@@ -1,6 +1,6 @@
 // 실시간 웹캠 화면 구현
 // - 사용자의 웹캠에 접근 : navigator.mediaDevices
-// -
+// - 실시간 웹캠 영상 화면 렌더링
 // -----------------------------------------------------
 
 const video = document.querySelector('.player');
@@ -8,6 +8,7 @@ const canvas = document.querySelector('.photo');
 const ctx = canvas.getContext('2d');
 const snap = document.querySelector('.snap'); // 촬영 시 들릴 효과음
 
+// 사용자의 실시간 영상 가져오기
 function getVideo() {
   navigator.mediaDevices
     .getUserMedia({
@@ -26,4 +27,18 @@ function getVideo() {
     });
 }
 
+// 캔버스에 영상 그리기
+function paintToCanvas() {
+  const width = video.videoWidth;
+  const height = video.videoHeight;
+  canvas.width = width;
+  canvas.height = height;
+
+  // 일정 시간마다 화면 그리기
+  return setInterval(() => {
+    ctx.drawImage(video, 0, 0, width, height);
+  }, 16);
+}
+
 getVideo();
+video.addEventListener('canplay', paintToCanvas);
