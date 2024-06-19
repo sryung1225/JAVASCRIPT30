@@ -2,7 +2,7 @@
 // - 사용자의 웹캠에 접근 : navigator.mediaDevices
 // - 실시간 웹캠 영상 화면 렌더링
 // - 순간 화면 캡쳐 및 저장
-// - 색상 필터 적용
+// - 색상 필터 적용 : 빨강 / RGB 분리
 // -----------------------------------------------------
 
 const video = document.querySelector('.player');
@@ -44,7 +44,7 @@ function paintToCanvas() {
 
     // 색상 필터 적용하기
     let pixels = ctx.getImageData(0, 0, width, height); // 캔버스 내 픽셀 데이터 가져오기
-    pixels = redEffect(pixels); // 빨강 필터 적용
+    pixels = rgbSplit(pixels); // 빨강 필터 적용
     ctx.putImageData(pixels, 0, 0); // 캔버스 내 픽셀 데이터 다시 그리기
   }, 16);
 }
@@ -68,9 +68,19 @@ function takePhoto() {
 // 색상 필터 - 빨간색
 function redEffect(pixels) {
   for (let i = 0; i < pixels.data.length; i += 4) {
-    pixels.data[i + 0] += 100; // red
+    pixels.data[i + 0] += 200; // red
     pixels.data[i + 1] -= 50; // green
     pixels.data[i + 2] *= 0.5; // blue
+  }
+  return pixels;
+}
+
+// 색상 필터 - RGB 색상 분리
+function rgbSplit(pixels) {
+  for (let i = 0; i < pixels.data.length; i += 4) {
+    pixels.data[i - 150] = pixels.data[i + 0]; // red
+    pixels.data[i + 500] = pixels.data[i + 1]; // green
+    pixels.data[i - 550] = pixels.data[i + 2]; // blue
   }
   return pixels;
 }
