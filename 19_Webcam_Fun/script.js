@@ -1,12 +1,14 @@
 // 실시간 웹캠 화면 구현
 // - 사용자의 웹캠에 접근 : navigator.mediaDevices
 // - 실시간 웹캠 영상 화면 렌더링
+// - 순간 화면 캡쳐 및 저장
 // -----------------------------------------------------
 
 const video = document.querySelector('.player');
 const canvas = document.querySelector('.photo');
 const ctx = canvas.getContext('2d');
 const snap = document.querySelector('.snap'); // 촬영 시 들릴 효과음
+const strip = document.querySelector('.strip'); // 갤러리
 
 // 사용자의 실시간 영상 가져오기
 function getVideo() {
@@ -38,6 +40,22 @@ function paintToCanvas() {
   return setInterval(() => {
     ctx.drawImage(video, 0, 0, width, height);
   }, 16);
+}
+
+// 순간 촬영 + 하단 갤러리 저장
+function takePhoto() {
+  // 촬영 효과음
+  snap.currentTime = 0;
+  snap.play();
+
+  // 캔버스 데이터(=순간 이미지) 저장
+  const data = canvas.toDataURL('image/jpeg'); // base64 형태
+  // 하단에 갤러리 형태로 나열 + 클릭 시 이미지 저장
+  const link = document.createElement('a');
+  link.href = data;
+  link.setAttribute('download', '캡쳐');
+  link.innerHTML = `<img src="${data}" alt="캡쳐 화면" />`; // <a download="캡쳐"><img /></a>
+  strip.insertBefore(link, strip.firstChild); // 최신순 정렬
 }
 
 getVideo();
