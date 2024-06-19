@@ -2,6 +2,7 @@
 // - 사용자의 웹캠에 접근 : navigator.mediaDevices
 // - 실시간 웹캠 영상 화면 렌더링
 // - 순간 화면 캡쳐 및 저장
+// - 색상 필터 적용
 // -----------------------------------------------------
 
 const video = document.querySelector('.player');
@@ -38,7 +39,13 @@ function paintToCanvas() {
 
   // 일정 시간마다 화면 그리기
   return setInterval(() => {
+    // 화면 그리기
     ctx.drawImage(video, 0, 0, width, height);
+
+    // 색상 필터 적용하기
+    let pixels = ctx.getImageData(0, 0, width, height); // 캔버스 내 픽셀 데이터 가져오기
+    pixels = redEffect(pixels); // 빨강 필터 적용
+    ctx.putImageData(pixels, 0, 0); // 캔버스 내 픽셀 데이터 다시 그리기
   }, 16);
 }
 
@@ -56,6 +63,16 @@ function takePhoto() {
   link.setAttribute('download', '캡쳐');
   link.innerHTML = `<img src="${data}" alt="캡쳐 화면" />`; // <a download="캡쳐"><img /></a>
   strip.insertBefore(link, strip.firstChild); // 최신순 정렬
+}
+
+// 색상 필터 - 빨간색
+function redEffect(pixels) {
+  for (let i = 0; i < pixels.data.length; i += 4) {
+    pixels.data[i + 0] += 100; // red
+    pixels.data[i + 1] -= 50; // green
+    pixels.data[i + 2] *= 0.5; // blue
+  }
+  return pixels;
 }
 
 getVideo();
