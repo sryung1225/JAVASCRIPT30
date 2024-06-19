@@ -2,7 +2,7 @@
 // - 사용자의 웹캠에 접근 : navigator.mediaDevices
 // - 실시간 웹캠 영상 화면 렌더링
 // - 순간 화면 캡쳐 및 저장
-// - 색상 필터 적용 : 빨강 / RGB 분리
+// - 필터 적용 : 빨강 / RGB 분리 / 크로마키
 // -----------------------------------------------------
 
 const video = document.querySelector('.player');
@@ -42,9 +42,11 @@ function paintToCanvas() {
     // 화면 그리기
     ctx.drawImage(video, 0, 0, width, height);
 
-    // 색상 필터 적용하기
+    // 필터 적용하기
     let pixels = ctx.getImageData(0, 0, width, height); // 캔버스 내 픽셀 데이터 가져오기
-    pixels = rgbSplit(pixels); // 빨강 필터 적용
+    // pixels = redEffects(pixels); // 빨강 필터 적용
+    // pixels = rgbSplit(pixels); // RGB 분리 필터 적용
+    pixels = greenScreen(pixels);
     ctx.putImageData(pixels, 0, 0); // 캔버스 내 픽셀 데이터 다시 그리기
   }, 16);
 }
@@ -65,7 +67,7 @@ function takePhoto() {
   strip.insertBefore(link, strip.firstChild); // 최신순 정렬
 }
 
-// 색상 필터 - 빨간색
+// 필터 - 빨간색
 function redEffect(pixels) {
   for (let i = 0; i < pixels.data.length; i += 4) {
     pixels.data[i + 0] += 200; // red
@@ -75,12 +77,39 @@ function redEffect(pixels) {
   return pixels;
 }
 
-// 색상 필터 - RGB 색상 분리
+// 필터 - RGB 색상 분리
 function rgbSplit(pixels) {
   for (let i = 0; i < pixels.data.length; i += 4) {
     pixels.data[i - 150] = pixels.data[i + 0]; // red
     pixels.data[i + 500] = pixels.data[i + 1]; // green
     pixels.data[i - 550] = pixels.data[i + 2]; // blue
+  }
+  return pixels;
+}
+
+// 필터 - 크로마키
+function greenScreen(pixels) {
+  const levels = {}; // 최대/최소 범위 저장
+
+  document.querySelectorAll('.rgb input').forEach((input) => {
+    levels[input.name] = input.value;
+  });
+
+  for (i = 0; i < pixels.data.length; i += 4) {
+    red = pixels.data[i + 0];
+    green = pixels.data[i + 1];
+    blue = pixels.data[i + 2];
+    alpha = pixels.data[i + 3];
+    if (
+      red >= levels.rmin &&
+      green >= levels.gmin &&
+      blue >= levels.bmin &&
+      red <= levels.rmax &&
+      green <= levels.gmax &&
+      blue <= levels.bmax
+    ) {
+      pixels.data[i + 3] = 0; // 알파 값 0으로 설정 => 투명화
+    }
   }
   return pixels;
 }
