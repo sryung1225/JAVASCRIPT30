@@ -32,7 +32,7 @@
 <tr><td align="center">17</td><td>Sort Without Articles</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/17_Sort_Without_Articles/">😁</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/17_Sort_Without_Articles/script.ts">😁</a></td></tr>
 <tr><td align="center">18</td><td>Adding Up Times with Reduce</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/18_Adding_Up_Times_with_Reduce/">📹</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/18_Adding_Up_Times_with_Reduce/script.ts">📹</a></td></tr>
 <tr><td align="center">19</td><td>Webcam Fun</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/19_Webcam_Fun/">💻</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/19_Webcam_Fun/script.ts">💻</a></td></tr>
-<tr><td align="center">20</td><td>Speech Detection</td><td align="center"></td><td align="center"></td></tr>
+<tr><td align="center">20</td><td>Speech Detection</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/20_Speech_Detection/">📢</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/20_Speech_Detection/script.ts">📢</a></td></tr>
 <tr><td align="center">21</td><td>Geolocation</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">22</td><td>Follow Along Link Highlighter</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">23</td><td>Speech Synthesis</td><td align="center"></td><td align="center"></td></tr>
