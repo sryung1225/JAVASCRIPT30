@@ -1,7 +1,8 @@
-// 음석 메모장
+// 음성 메모장
 // - 웹앱에서 음성 인식을 지원하는 Web Speech API
 // - SpeechRecognition을 이용한 실시간 음성 인식
 // - 음성 인식 결과 텍스트를 회차마다 한 줄로 화면 렌더링
+// - 정규표현식을 활용한 특정 단어 필터링
 // -----------------------------------------------------
 
 // 음성 인식을 위한 인터페이스 SpeechRecognition
@@ -10,7 +11,7 @@ window.SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 
 const recognition = new SpeechRecognition();
-recognition.interimResults = false; // 회차 중 중간 결과 반환 (= 글자 하나하나마다 result 동작)
+recognition.interimResults = true; // 회차 중 중간 결과 반환 (= 글자 하나하나마다 result 동작)
 recognition.lang = 'ko-KR'; // 인식 언어 설정 (영어: en-US)
 
 // 인식 결과를 표시할 영역 생성
@@ -25,7 +26,9 @@ function handleResult(e) {
     .map((result) => result.transcript)
     .join('');
   // console.log(transcript); // ? "안녕하세요"
-  p.textContent = transcript;
+
+  const poopScript = transcript.replace(/바보|멍청이|똥/gi, '💩');
+  p.textContent = poopScript;
 
   // console.log(e.results[0].isFinal);
   // false 였다가 음성 종료되면 true로 변환됨 (= 회차 종료)
