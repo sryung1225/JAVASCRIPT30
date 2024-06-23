@@ -34,7 +34,7 @@
 <tr><td align="center">19</td><td>Webcam Fun</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/19_Webcam_Fun/">💻</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/19_Webcam_Fun/script.ts">💻</a></td></tr>
 <tr><td align="center">20</td><td>Speech Detection</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/20_Speech_Detection/">📢</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/20_Speech_Detection/script.ts">📢</a></td></tr>
 <tr><td align="center">21</td><td>Geolocation</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/21_Geolocation/">🧭</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/21_Geolocation/script.ts">🧭</a></td></tr>
-<tr><td align="center">22</td><td>Follow Along Link Highlighter</td><td align="center"></td><td align="center"></td></tr>
+<tr><td align="center">22</td><td>Follow Along Link Highlighter</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/22_Follow_Along_Link_Highlighter/">🖲</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/22_Follow_Along_Link_Highlighter/script.ts">🖲</a></td></tr>
 <tr><td align="center">23</td><td>Speech Synthesis</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">24</td><td>Sticky Nav</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">25</td><td>Event Capture, Propagation, Bubbling and Once</td><td align="center"></td><td align="center"></td></tr>
