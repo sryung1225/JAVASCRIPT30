@@ -1,6 +1,6 @@
 // TTS
 // - 주어진 텍스트를 소리로 바꿔주는 Web Speech API의 하나인 SpeechSynthesis API
-
+// - Speak 버튼을 통해 말하기 : speak()
 // -----------------------------------------------------
 
 const msg = new SpeechSynthesisUtterance(); // 인스턴스 msg
@@ -11,3 +11,11 @@ const voicesDropdown = document.querySelector('[name="voice"]');
 const options = document.querySelectorAll('[type="range"], [name="text"]');
 const speakButton = document.querySelector('#speak');
 const stopButton = document.querySelector('#stop');
+
+msg.text = document.querySelector('[name="text"]').value; // textarea의 value를 읽을 대상으로 지정
+
+function speak() {
+  speechSynthesis.speak(msg);
+}
+
+speakButton.addEventListener('click', speak);
