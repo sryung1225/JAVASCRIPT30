@@ -2,7 +2,8 @@
 // - 주어진 텍스트를 소리로 바꿔주는 Web Speech API의 하나인 SpeechSynthesis API
 // - Speak 버튼을 통해 말하기 : speak()
 // - Stop 버튼을 통해 말하기 취소하기 : cancel()
-// - 음성 옵션 조절하기 : text / rate / pitch
+// - 음성 목소리 설정하기 : voices.getVoices()
+// - 음성 옵션 조절하기 : text / rate / pitch / voice
 // -----------------------------------------------------
 
 const msg = new SpeechSynthesisUtterance(); // 인스턴스 msg
@@ -15,6 +16,24 @@ const speakButton = document.querySelector('#speak');
 const stopButton = document.querySelector('#stop');
 
 msg.text = document.querySelector('[name="text"]').value; // textarea의 value를 읽을 대상으로 지정
+
+// 목소리 선택 dropdown 만들기
+function populateVoices() {
+  voices = this.getVoices(); // 사용 가능한 목소리 목록을 가져오기
+  voicesDropdown.innerHTML = voices
+    .filter((voice) => voice.lang.includes('ko')) // 한국어 목소리 필터링
+    .map(
+      (voice) =>
+        `<option value="${voice.name}">${voice.name} (${voice.lang})</option>`,
+    )
+    .join('');
+}
+
+// 설정된 목소리로 셋팅 변경하기
+function setVoice() {
+  msg.voice = voices.find((voice) => voice.name === this.value);
+  toggle(); // 목소리 변경 후 자동 재생
+}
 
 // 옵션(텍스트/음높이/속도) 조절
 function setOption() {
@@ -34,6 +53,8 @@ function toggle(startOver = true) {
   }
 }
 
+speechSynthesis.addEventListener('voiceschanged', populateVoices);
+voicesDropdown.addEventListener('change', setVoice);
 options.forEach((option) => option.addEventListener('change', setOption));
 speakButton.addEventListener('click', toggle);
 stopButton.addEventListener('click', () => toggle(false));
