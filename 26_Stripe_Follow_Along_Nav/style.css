@@ -86,12 +86,11 @@ nav ul {
 /* 드롭다운 (마우스 hover) - 보이게 */
 .trigger-enter .dropdown {
   display: block;
-  opacity: 1;
 }
 
-/* .trigger-enter-active .dropdown {
+.trigger-enter-active .dropdown {
   opacity: 1;
-} */
+}
 
 /* 드롭다운 배경 (기본) - 안보이게 */
 .dropdownBackground {
