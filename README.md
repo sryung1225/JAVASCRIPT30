@@ -38,7 +38,7 @@
 <tr><td align="center">23</td><td>Speech Synthesis</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/23_Speech_Synthesis/">🤖</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/23_Speech_Synthesis/script.ts">🤖</a></td></tr>
 <tr><td align="center">24</td><td>Sticky Nav</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/24_Sticky_Nav/">🍯</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/24_Sticky_Nav/script.ts">🍯</a></td></tr>
 <tr><td align="center">25</td><td>Event Capture, Propagation, Bubbling and Once</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/25_Event_Capture,_Propagtion,_Bubbling_and_Once/">🧼</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/25_Event_Capture,_Propagtion,_Bubbling_and_Once/script.ts">🧼</a></td></tr>
-<tr><td align="center">26</td><td>Stripe Follow Along Nav</td><td align="center"></td><td align="center"></td></tr>
+<tr><td align="center">26</td><td>Stripe Follow Along Nav</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/26_Stripe_Follow_Along_Nav/">🧼</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/26_Stripe_Follow_Along_Nav/script.ts">🧼</a></td></tr>
 <tr><td align="center">27</td><td>Click and Drag</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">28</td><td>Video Speed Controller</td><td align="center"></td><td align="center"></td></tr>
 <tr><td align="center">29</td><td>Countdown Timer</td><td align="center"></td><td align="center"></td></tr>
