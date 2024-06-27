@@ -69,6 +69,7 @@ nav ul {
   justify-content: center;
 }
 
+/* 드롭다운 (기본) */
 .dropdown {
   opacity: 0;
   position: absolute;
@@ -82,13 +83,15 @@ nav ul {
   display: none;
 }
 
+/* 드롭다운 (마우스 hover) */
 .trigger-enter .dropdown {
   display: block;
-}
-
-.trigger-enter-active .dropdown {
   opacity: 1;
 }
+
+/* .trigger-enter-active .dropdown {
+  opacity: 1;
+} */
 
 .dropdownBackground {
   width: 100px;
