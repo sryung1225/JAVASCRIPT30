@@ -41,7 +41,7 @@ body {
 
 .items.active {
   background: rgba(255, 255, 255, 0.3);
-  cursor: grabbing;
+  cursor: grabbing; // 커서가 쥐고 있는 모양이 됨
   cursor: -webkit-grabbing;
   transform: scale(1);
 }
