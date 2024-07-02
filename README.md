@@ -42,7 +42,7 @@
 <tr><td align="center">27</td><td>Click and Drag</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/27_Click_and_Drag/">🎹</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/27_Click_and_Drag/script.ts">🎹</a></td></tr>
 <tr><td align="center">28</td><td>Video Speed Controller</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/28_Video_Speed_Controller/">⏭</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/28_Video_Speed_Controller/script.ts">⏭</a></td></tr>
 <tr><td align="center">29</td><td>Countdown Timer</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/29_Countdown_Timer/">⌛</a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/29_Countdown_Timer/script.ts">⌛</a></td></tr>
-<tr><td align="center">30</td><td>Whack A Mole</td><td align="center"></td><td align="center"></td></tr>
+<tr><td align="center">30</td><td>Whack A Mole</td><td align="center"><a href="https://sryung1225.github.io/JAVASCRIPT30/30_Whack_A_Mole/"></a></td><td align="center"><a href="https://github.com/sryung1225/JAVASCRIPT30/blob/main/30_Whack_A_Mole/script.ts">🕳</a></td></tr>
 </tbody>
 </table>
 
